@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏦 Bank Account System</h1>
+        <div id="menu">
+            <button onclick="showSection('create')"><i class="fas fa-user-plus"></i> Create New Account</button>
+            <button onclick="showSection('credit')"><i class="fas fa-plus-circle"></i> Credit Amount</button>
+            <button onclick="showSection('debit')"><i class="fas fa-minus-circle"></i> Debit Amount</button>
+            <button onclick="showSection('balance')"><i class="fas fa-eye"></i> View Balance</button>
+            <button onclick="showSection('details')"><i class="fas fa-info-circle"></i> View Account Details</button>
+        </div>
+
+        <div id="create" class="section hidden">
+            <h2>Create New Account</h2>
+            <form id="createForm">
+                <input type="text" id="name" placeholder="Account Holder Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+                <input type="text" id="bankName" placeholder="Bank Name" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Create Account</button>
+            </form>
+            <div id="createResult"></div>
+        </div>
+
+        <div id="credit" class="section hidden">
+            <h2>Credit Amount</h2>
+            <form id="creditForm">
+                <input type="text" id="creditId" placeholder="Account ID" required>
+                <input type="password" id="creditPassword" placeholder="Password" required>
+                <input type="number" id="creditAmount" placeholder="Amount to Credit" step="0.01" required>
+                <button type="submit">Credit</button>
+            </form>
+            <div id="creditResult"></div>
+        </div>
+
+        <div id="debit" class="section hidden">
+            <h2>Debit Amount</h2>
+            <form id="debitForm">
+                <input type="text" id="debitId" placeholder="Account ID" required>
+                <input type="password" id="debitPassword" placeholder="Password" required>
+                <input type="number" id="debitAmount" placeholder="Amount to Debit" step="0.01" required>
+                <button type="submit">Debit</button>
+            </form>
+            <div id="debitResult"></div>
+        </div>
+
+        <div id="balance" class="section hidden">
+            <h2>View Balance</h2>
+            <form id="balanceForm">
+                <input type="text" id="balanceId" placeholder="Account ID" required>
+                <input type="password" id="balancePassword" placeholder="Password" required>
+                <button type="submit">View Balance</button>
+            </form>
+            <div id="balanceResult"></div>
+        </div>
+
+        <div id="details" class="section hidden">
+            <h2>View Account Details</h2>
+            <form id="detailsForm">
+                <input type="text" id="detailsId" placeholder="Account ID" required>
+                <input type="password" id="detailsPassword" placeholder="Password" required>
+                <button type="submit">View Details</button>
+            </form>
+            <div id="detailsResult"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

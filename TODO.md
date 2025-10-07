@@ -1,0 +1,4 @@
+- [ ] Reduce background brightness filter from 1.4 to 0.6 in styles.css
+- [ ] Update UI colors to a more modern dark theme (e.g., darker gradients, better contrasts)
+- [ ] Enhance shadows and spacing for better visual appeal
+- [ ] Test the changes by opening index.html in browser
